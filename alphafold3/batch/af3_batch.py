@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Runs a batch of AlphaFold 3 predictions against a Gemini Enterprise Agent Platform endpoint.
+"""Runs a batch of AlphaFold 3 predictions on Google Cloud.
 
 Validates every request JSON in a Cloud Storage folder with an upfront dry run, then dispatches
 the folds in parallel across the endpoint's GPU replicas.

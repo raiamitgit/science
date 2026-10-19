@@ -1,6 +1,6 @@
 # AlphaFold 3 Batch Prediction
 
-[AlphaFold 3](https://doi.org/10.1038/s41586-024-07487-w) is available on Google Cloud Gemini Enterprise Agent Platform for commercial use. It supports interactive online predictions that fold one biomolecular complex at a time. This script is a thin wrapper that runs a batch of AlphaFold 3 predictions against a deployed online endpoint. You can run it from a local terminal, a Python script, or a batch job runner such as Cloud Run Jobs:
+[AlphaFold 3](https://doi.org/10.1038/s41586-024-07487-w) is available on Google Cloud Gemini platform for commercial use. It supports online predictions that fold one biomolecular complex at a time. This script is a thin wrapper that runs a batch of AlphaFold 3 predictions against a deployed online endpoint. You can run it from a local terminal, a Python script, or a batch job runner such as Cloud Run Jobs:
 
 * Reads a batch of prediction requests from a Google Cloud Storage directory.
 * Runs a dry run across every request before starting any predictions, checking validity of each request.
