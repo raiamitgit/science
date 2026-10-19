@@ -1,0 +1,28 @@
+{
+  "instances": [
+    {
+      "name": "trp_cage_1l2y",
+      "modelSeeds": [
+        1
+      ],
+      "sequences": [
+        {
+          "protein": {
+            "id": "A",
+            "sequence": "NLYIQWLKDGGPSSGRPPPS",
+            "unpairedMsa": ">query\nNLYIQWLKDGGPSSGRPPPS\n",
+            "pairedMsa": "",
+            "templates": []
+          }
+        }
+      ],
+      "dialect": "alphafold3",
+      "version": 1
+    }
+  ],
+  "parameters": {
+    "output_dir": "gs://my-gcs-bucket/af3_outputs/01_trp_cage_1l2y",
+    "run_data_pipeline": false,
+    "num_diffusion_samples": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "instances": [
+    {
+      "name": "coiled_coil_dimer",
+      "modelSeeds": [
+        1
+      ],
+      "sequences": [
+        {
+          "protein": {
+            "id": "A",
+            "sequence": "KRAHHNALERKRRDHIKDSFHSLRDSVP",
+            "unpairedMsa": "",
+            "pairedMsa": "",
+            "templates": []
+          }
+        },
+        {
+          "protein": {
+            "id": "B",
+            "sequence": "ADKRAHHNALERKRRDHIKDSFHSLRDS",
+            "unpairedMsa": "",
+            "pairedMsa": "",
+            "templates": []
+          }
+        }
+      ],
+      "dialect": "alphafold3",
+      "version": 1
+    }
+  ],
+  "parameters": {
+    "output_dir": "gs://my-gcs-bucket/af3_outputs/05_coiled_coil_dimer",
+    "run_data_pipeline": false,
+    "num_diffusion_samples": 3
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "instances": [
+    {
+      "name": "zinc_finger_zn_complex",
+      "modelSeeds": [
+        1
+      ],
+      "sequences": [
+        {
+          "protein": {
+            "id": "A",
+            "sequence": "YKCPECGKSFSQKSDLVKHQRTHTGEKP",
+            "unpairedMsa": ">query\nYKCPECGKSFSQKSDLVKHQRTHTGEKP\n",
+            "pairedMsa": "",
+            "templates": []
+          }
+        },
+        {
+          "ligand": {
+            "id": "B",
+            "ccdCodes": [
+              "ZN"
+            ]
+          }
+        }
+      ],
+      "dialect": "alphafold3",
+      "version": 1
+    }
+  ],
+  "parameters": {
+    "output_dir": "gs://my-gcs-bucket/af3_outputs/04_zinc_finger_zn_complex",
+    "run_data_pipeline": false,
+    "num_diffusion_samples": 1
+  }
+}

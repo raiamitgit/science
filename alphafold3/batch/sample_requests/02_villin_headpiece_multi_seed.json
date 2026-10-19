@@ -1,0 +1,29 @@
+{
+  "instances": [
+    {
+      "name": "villin_headpiece_multi_seed",
+      "modelSeeds": [
+        1,
+        2
+      ],
+      "sequences": [
+        {
+          "protein": {
+            "id": "A",
+            "sequence": "LSDEDFKAVFGMTRSAFANLPLWKQQNLKKEKGLF",
+            "unpairedMsa": ">query\nLSDEDFKAVFGMTRSAFANLPLWKQQNLKKEKGLF\n",
+            "pairedMsa": "",
+            "templates": []
+          }
+        }
+      ],
+      "dialect": "alphafold3",
+      "version": 1
+    }
+  ],
+  "parameters": {
+    "output_dir": "gs://my-gcs-bucket/af3_outputs/02_villin_headpiece_multi_seed",
+    "run_data_pipeline": false,
+    "num_diffusion_samples": 1
+  }
+}
