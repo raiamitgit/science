@@ -1,0 +1,4 @@
+# Ignore all files (*), then re-include (!) only Dockerfile and af3_batch.py for Cloud Build.
+*
+!Dockerfile
+!af3_batch.py
