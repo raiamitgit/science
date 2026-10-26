@@ -1,5 +1,9 @@
 # AlphaFold 3 Batch Prediction
 
+## Disclaimer
+
+All code and examples in this repository are provided for reference and demonstration purposes only on an "AS IS" basis, without warranties or production support guarantees of any kind.
+
 [AlphaFold 3](https://doi.org/10.1038/s41586-024-07487-w) is available on Google Cloud Gemini Platform for commercial use. Each online endpoint replica folds one biomolecular complex at a time. This batch runner sends a folder of AlphaFold 3 prediction requests to a deployed endpoint from a local terminal, a Python script, or Cloud Run Jobs:
 
 * Reads a folder of JSON prediction requests from Google Cloud Storage.
@@ -34,16 +38,24 @@ Copy the full prediction URL from your endpoint's Sample Request page in the Goo
 ```bash
 ENDPOINT_URL="https://HOST/v1/projects/PROJECT_ID/locations/LOCATION/endpoints/ENDPOINT_ID:predict"
 
-python3 af3_batch.py --input gs://my-gcs-bucket/af3_inputs --endpoint-url "$ENDPOINT_URL" --dry-run
+python3 af3_batch.py \
+  --input gs://my-gcs-bucket/af3_inputs \
+  --endpoint-url "$ENDPOINT_URL" \
+  --dry-run
 ```
 
 Once the dry run passes, run the batch, or add the resume flag after an interruption to skip requests whose output folders already hold finished predictions:
 
 ```bash
-python3 af3_batch.py --input gs://my-gcs-bucket/af3_inputs --endpoint-url "$ENDPOINT_URL"
+python3 af3_batch.py \
+  --input gs://my-gcs-bucket/af3_inputs \
+  --endpoint-url "$ENDPOINT_URL"
 
 # Resume an interrupted batch, skipping completed output folders:
-python3 af3_batch.py --input gs://my-gcs-bucket/af3_inputs --endpoint-url "$ENDPOINT_URL" --resume
+python3 af3_batch.py \
+  --input gs://my-gcs-bucket/af3_inputs \
+  --endpoint-url "$ENDPOINT_URL" \
+  --resume
 ```
 
 From Python, import the module and call the runner directly:
@@ -86,5 +98,8 @@ gcloud run jobs execute af3-batch \
 Cloud Run prints the execution name right away. Follow live per-fold progress in Cloud Run Job logs, set up a Cloud Monitoring email alert on `run.googleapis.com/job/completed_execution_count`, or check overall execution status directly:
 
 ```bash
-gcloud run jobs executions describe EXECUTION_NAME --project PROJECT_ID --region REGION
+gcloud run jobs executions describe EXECUTION_NAME \
+  --project PROJECT_ID \
+  --region REGION
 ```
+
